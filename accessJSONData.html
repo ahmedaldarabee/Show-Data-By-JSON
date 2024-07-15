@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Test | JSON </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+
+    <div class="parent">
+        <div id="name"></div>
+        <div id="password"></div>
+    </div>
+    
+</body>
+
+    <script>
+        
+        function strTOObject(){
+            
+            let strCode = '{"username":"ahmed","password":"ahmed79"}'
+            let convertToObj = JSON.parse(strCode);
+            console.log(typeof convertToObj)
+
+        }
+
+        function objToJson(){
+            let jsCode = {
+                username : "ahmed",
+                password : "ascll78",
+                age      : 21
+            }
+
+            console.log(typeof jsCode) // be as object!
+            let jsonData = JSON.stringify(jsCode);
+            console.log(jsonData)
+        }
+
+        function example1(){
+
+            let myInfo = ' { "username" : "ahmed","password" :  124 }'
+            // the reason about getting undefine because work as string without converted into full json
+            // document.getElementById('name'). innerHTML = myInfo.username
+        
+            let myJSON = JSON.parse(myInfo);
+            document.getElementById('name'). innerHTML = myJSON.username
+        
+        }
+                
+        function example2(){
+            axios.get("studentData.json")
+            .then((request) => {
+                console.log(request.data.name)
+            }).catch((error) => {
+                alert(error)
+            })
+        }
+        example2()
+</script>
+</html>

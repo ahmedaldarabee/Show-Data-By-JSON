@@ -1,0 +1,37 @@
+{
+    "name":"ahmed",
+
+    "skills":
+    [
+        ["HTML","CSS","JavaScrip"],
+        ["PHP","C#","React JS"]
+    ],
+
+    "address": {
+        "Location": "Amman",
+        "Phone" : "0785266266"
+    },
+
+    "age":21,
+    
+    "working":false,
+    
+    "id":null,
+
+    "skillsProgress" : [
+        {
+            "HTML" :"80%"
+        },{
+            "CSS" :"80%"
+        },{
+            "Js" :"80%"
+        },{
+            "PHP" :"80%"
+        },{
+            "C#" :[
+                "Level-1",
+                "Level-2"
+            ]
+        }
+    ] 
+}
